@@ -22,9 +22,12 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - name: yarn install and build
+      - name: yarn install
         run: |
-          yarn install --frozen-lockfile
+          yarn install
+
+      - name: yarn  build
+        run: |
           yarn build
 
       - name: Copy static files
